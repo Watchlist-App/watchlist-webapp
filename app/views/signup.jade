@@ -1,0 +1,30 @@
+.jumbotron
+
+  .page-header
+    h2
+      span.glyphicon.glyphicon-tower Create account
+
+  .messages
+
+  form
+
+    #name-group.form-group
+      input.form-control(type="text", name="name", placeholder="Name")
+      span.help-block
+
+    #email-group.form-group
+      input.form-control(type="text", name="email", placeholder="Email")
+      span.help-block
+
+    #password-group.form-group
+      input.form-control(type="text", name="password", placeholder="Password")
+      span.help-block
+      input.form-control(type="text", name="passwordConfirmation", placeholder="Password confirmation")
+      span.help-block
+
+    #address-group.form-group
+      input.form-control(type="text", name="address", placeholder="Address")
+      span.help-block
+
+    button.btn.btn-success.btn-lg.btn-block(type="submit")
+      span.glyphicon.glyphicon-flash Submit!
