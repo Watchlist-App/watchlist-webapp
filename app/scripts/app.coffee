@@ -14,5 +14,8 @@ angular.module('watchlistWebApp', [
       .when '/signup',
         templateUrl: 'views/signup.html'
         controller: 'SignupCtrl'
+      .when '/users',
+        templateUrl: 'views/users.html'
+        controller: 'UsersCtrl'
       .otherwise
         redirectTo: '/'
