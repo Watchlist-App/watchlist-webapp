@@ -1,30 +1,30 @@
-.jumbotron
+.container
+  .jumbotron
 
-  .page-header
-    h2
-      span.glyphicon.glyphicon-tower Create account
+    .page-header
+      h2 Create account
 
-  .messages
+    #messages.alert(ng-show="errorMessage", ng-class="{'alert-danger': errorMessage}") {{ errorMessage }}
 
-  form
+    form(ng-submit="processForm()")
 
-    #name-group.form-group
-      input.form-control(type="text", name="name", placeholder="Name")
-      span.help-block
+      #name-group.form-group(ng-class="{ 'has-error' : errorName }")
+        input.form-control(type="text", name="name", placeholder="Name", ng-model="formData.name")
+        span.help-block(ng-show="errorName") {{ errorName }}
 
-    #email-group.form-group
-      input.form-control(type="text", name="email", placeholder="Email")
-      span.help-block
+      #email-group.form-group(ng-class="{ 'has-error' : errorEmail }")
+        input.form-control(type="text", name="email", placeholder="Email", ng-model="formData.email")
+        span.help-block(ng-show="errorEmail") {{ errorEmail }}
 
-    #password-group.form-group
-      input.form-control(type="text", name="password", placeholder="Password")
-      span.help-block
-      input.form-control(type="text", name="passwordConfirmation", placeholder="Password confirmation")
-      span.help-block
+      #password-group.form-group(ng-class="{ 'has-error' : errorPassword, 'has-success' : validationSuccessful }")
+        input.form-control(type="text", name="password", placeholder="Password", ng-model="formData.password")
+        span.help-block
+        input.form-control(type="text", name="passwordConfirmation", placeholder="Password confirmation", ng-model="formData.confirmation")
+        span.help-block(ng-show="errorPassword") {{ errorPassword }}
 
-    #address-group.form-group
-      input.form-control(type="text", name="address", placeholder="Address")
-      span.help-block
+      #address-group.form-group(ng-class="{ 'has-error' : errorAddress }")
+        input.form-control(type="text", name="address", placeholder="Address", ng-model="formData.address")
+        span.help-block(ng-show="errorAddress") {{ errorAddress }}
 
-    button.btn.btn-success.btn-lg.btn-block(type="submit")
-      span.glyphicon.glyphicon-flash Submit!
+      button.btn.btn-success.btn-lg.btn-block(type="submit")
+        span.glyphicon.glyphicon-flash Submit!
