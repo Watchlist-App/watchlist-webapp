@@ -29,6 +29,9 @@ angular.module('watchlistWebApp')
     @listUsers = ->
       api.listUsers()
 
+    @getUserWithId = (id) ->
+      api.get({id: id})
+
     @
 
 

@@ -4,7 +4,8 @@ angular.module('watchlistWebApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'angular-md5'
 ])
   .config ($routeProvider) ->
     $routeProvider
@@ -17,7 +18,7 @@ angular.module('watchlistWebApp', [
       .when '/users',
         templateUrl: 'views/users.html'
         controller: 'UsersCtrl'
-      .when '/profile',
+      .when '/profile/:userId',
         templateUrl: 'views/profile.html'
         controller: 'ProfileCtrl'
       .otherwise

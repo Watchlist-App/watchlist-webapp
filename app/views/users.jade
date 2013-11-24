@@ -1,4 +1,5 @@
 h1 Watchlist Users
 
 ul.list-group
-  li.list-group-item(ng-repeat='user in users') {{user.email}} - {{user.name}}
+  li.list-group-item(ng-repeat='user in users')
+    a(href="#profile/{{user.id}}"){{user.name}} - {{user.email}}

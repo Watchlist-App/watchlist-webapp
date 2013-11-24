@@ -1,9 +1,6 @@
 'use strict'
 
 angular.module('watchlistWebApp')
-  .controller 'ProfileCtrl', ($scope) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
+  .controller 'ProfileCtrl', ($scope, $routeParams, md5, Userservice) ->
+    $scope.userId = $routeParams.userId
+    $scope.user = Userservice.getUserWithId($routeParams.userId)
