@@ -1,0 +1,6 @@
+.jumbotron
+  h1 {{user.name}}
+  p email - {{user.email}}
+  p password - {{user.password}}
+  a.thumbnail(href="#")
+    img(src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=300")
