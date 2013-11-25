@@ -77,3 +77,35 @@ body {
     border-bottom: 0;
   }
 }
+
+/* Animations */
+.repeat-item.ng-enter,
+.repeat-item.ng-leave {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+}
+
+.repeat-item.ng-enter,
+.repeat-item.ng-leave.ng-leave-active {
+  opacity:0;
+}
+.repeat-item.ng-leave,
+.repeat-item.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+
+.app-view.ng-enter,
+.app-view.ng-leave {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+}
+
+.app-view.ng-enter,
+.app-view.ng-leave.ng-leave-active {
+  opacity:0;
+}
+.app-view.ng-leave,
+.app-view.ng-enter.ng-enter-active {
+  opacity:1;
+}
