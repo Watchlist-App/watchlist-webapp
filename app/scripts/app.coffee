@@ -5,6 +5,7 @@ angular.module('watchlistWebApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'ngAnimate',
   'angular-md5'
 ])
   .config ($routeProvider) ->
@@ -24,5 +25,8 @@ angular.module('watchlistWebApp', [
       .when '/movies',
         templateUrl: 'views/movies.html'
         controller: 'MoviesCtrl'
+      .when '/movie/:movieId',
+        templateUrl: 'views/movie.html'
+        controller: 'MovieCtrl'
       .otherwise
         redirectTo: '/'
