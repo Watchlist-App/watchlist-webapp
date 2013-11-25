@@ -1,5 +1,8 @@
+input.form-control(type="text", ng-model="search")
+br
+
 .row
-  .col-sm-6.col-md-4(ng-repeat="movie in movies")
+  .col-lg-5.col-md-4.repeat-item(ng-repeat="movie in movies | filter : { title : search }")
     .thumbnail
       // img(src="http://www.rounds.com/blog/wp-content/uploads/2009/09/2008-the-dark-knight-batman-movie-poster-7.jpg", alt="...")
       img(src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w500/{{ movie.backdrop_path }}", alt="...")
@@ -7,5 +10,5 @@
         h3 {{movie.title}}
         p
         p
-          a.btn.btn-primary(href="#", role="button") info
+          a.btn.btn-primary(href="#/movie/{{movie.id}}", role="button") info
           a.btn.btn-default(href="#", role="button") add
