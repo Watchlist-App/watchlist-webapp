@@ -1,0 +1,13 @@
+.thumbnail
+  // img(src="http://www.rounds.com/blog/wp-content/uploads/2009/09/2008-the-dark-knight-batman-movie-poster-7.jpg", alt="...")
+  img(src="{{poster}}")
+  .caption
+    h3 {{movie.title}}
+    p {{movie.overview}}
+    h4 genres:
+    ul
+      li(ng-repeat="genre in movie.genres") {{genre.name}}
+    p
+      a.btn.btn-primary(href="#", role="button") info
+      a.btn.btn-default(href="#", role="button") add
+  p {{trailer}}
