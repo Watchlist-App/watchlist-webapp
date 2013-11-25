@@ -21,5 +21,8 @@ angular.module('watchlistWebApp', [
       .when '/profile/:userId',
         templateUrl: 'views/profile.html'
         controller: 'ProfileCtrl'
+      .when '/movies',
+        templateUrl: 'views/movies.html'
+        controller: 'MoviesCtrl'
       .otherwise
         redirectTo: '/'

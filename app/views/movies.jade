@@ -1,0 +1,11 @@
+.row
+  .col-sm-6.col-md-4(ng-repeat="movie in movies")
+    .thumbnail
+      // img(src="http://www.rounds.com/blog/wp-content/uploads/2009/09/2008-the-dark-knight-batman-movie-poster-7.jpg", alt="...")
+      img(src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w500/{{ movie.backdrop_path }}", alt="...")
+      .caption
+        h3 {{movie.title}}
+        p
+        p
+          a.btn.btn-primary(href="#", role="button") info
+          a.btn.btn-default(href="#", role="button") add
