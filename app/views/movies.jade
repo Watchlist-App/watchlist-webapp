@@ -2,9 +2,9 @@ input.form-control(type="text", ng-model="search")
 br
 
 .row(infinite-scroll="loadMore()")
-  .col-lg-5.col-md-4.repeat-item(ng-repeat="movie in movies | filter : { title : search }")
+  .col-lg-5.col-lg-4.repeat-item(ng-repeat="movie in movies | filter : { title : search }")
     .thumbnail
-      img(src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w500/{{ movie.backdrop_path }}", alt="...")
+      img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}", alt="...")
       .caption
         h3 {{movie.title}}
         p
