@@ -1,1 +1,1 @@
-<p>This is the search view.</p>
+<h1>Search</h1><input type="text" ng-model="searchPhrase" ng-change="search()" class="form-control"/><ul class="list-group"><li ng-repeat="movie in results" class="list-group-item repeat-item"><a href="#movie/{{movie.id}}"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w92/{{ movie.poster_path }}"/><strong>{{movie.title}}</strong></a></li></ul>
