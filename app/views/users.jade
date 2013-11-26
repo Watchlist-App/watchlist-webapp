@@ -1,5 +1,9 @@
 h1 Watchlist Users
 
+label.control-label(for="search") search
+input#search.form-control(type="text", ng-model="search")
+br
+
 ul.list-group
-  li.list-group-item(ng-repeat='user in users')
+  li.list-group-item.repeat-item(ng-repeat='user in users | filter : search')
     a(href="#profile/{{user.id}}"){{user.name}} - {{user.email}}

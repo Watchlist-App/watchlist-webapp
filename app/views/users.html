@@ -1,1 +1,1 @@
-<h1>Watchlist Users</h1><ul class="list-group"><li ng-repeat="user in users" class="list-group-item"><a href="#profile/{{user.id}}">{{user.name}} - {{user.email}}</a></li></ul>
+<h1>Watchlist Users</h1><label for="search" class="control-label">search</label><input id="search" type="text" ng-model="search" class="form-control"/><br/><ul class="list-group"><li ng-repeat="user in users | filter : search" class="list-group-item repeat-item"><a href="#profile/{{user.id}}">{{user.name}} - {{user.email}}</a></li></ul>
