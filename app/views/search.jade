@@ -1,0 +1,9 @@
+h1 Search
+
+input.form-control(type="text", ng-model="searchPhrase", ng-change="search()")
+
+ul.list-group
+  li.list-group-item.repeat-item(ng-repeat="movie in results")
+    a(href="#movie/{{movie.id}}")
+      img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w92/{{ movie.poster_path }}")
+      strong {{movie.title}}
