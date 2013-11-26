@@ -29,5 +29,8 @@ angular.module('watchlistWebApp', [
       .when '/movie/:movieId',
         templateUrl: 'views/movie.html'
         controller: 'MovieCtrl'
+      .when '/search',
+        templateUrl: 'views/search.html'
+        controller: 'SearchCtrl'
       .otherwise
         redirectTo: '/'
