@@ -1,7 +1,7 @@
 input.form-control(type="text", ng-model="search")
 br
 
-.row
+.row(infinite-scroll="loadMore()")
   .col-lg-5.col-md-4.repeat-item(ng-repeat="movie in movies | filter : { title : search }")
     .thumbnail
       img(src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w500/{{ movie.backdrop_path }}", alt="...")

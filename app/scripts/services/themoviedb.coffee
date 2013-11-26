@@ -8,13 +8,14 @@ angular.module('watchlistWebApp')
     @imageURL = "http://d3gtl9l2a4fn1j.cloudfront.net/t/p/"
     @imageLarge = "w500"
 
-    @popularMovies = (callback) ->
+    @popularMovies = (page, callback) ->
 
       $http
         method: 'GET'
         url: baseURL + 'popular'
         params:
-          api_key:apiKey
+          api_key: apiKey
+          page: page
       .
         success (data, status, headers, config) ->
           callback data

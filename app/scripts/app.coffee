@@ -6,6 +6,7 @@ angular.module('watchlistWebApp', [
   'ngSanitize',
   'ngRoute',
   'ngAnimate',
+  'infinite-scroll',
   'angular-md5'
 ])
   .config ($routeProvider) ->
