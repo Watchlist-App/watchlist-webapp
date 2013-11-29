@@ -6,3 +6,10 @@
   button.btn.btn-large.btn-info edit
   span 
   button.btn.btn-large.btn-danger(ng-click="deleteUser()") delete
+  br
+  br
+  h3 Lists
+  ul.list-group
+    li.list-group-item(ng-repeat="list in user.lists"){{list.title}}
+      ul.list-group
+        li.list-group-item(ng-repeat="movieId in list.movies"){{movieId}}
