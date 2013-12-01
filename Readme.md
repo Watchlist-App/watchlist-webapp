@@ -14,6 +14,7 @@ Watchlist web app
 [Express.js](http://expressjs.com)  
 [socket.io](http://socket.io)  
 [MongoDB](http://www.mongodb.org)  
+[Redis](http://redis.io)  
 
 User accounts are stored on our [server](http://watchlist-app-server.herokuapp.com/user). (Github [repo](https://github.com/Watchlist-App/watchlist-server))  
 Currently hosted on [heroku](http://watchlist-webapp.herokuapp.com/#/)  
