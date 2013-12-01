@@ -32,7 +32,7 @@ angular.module('watchlistWebApp', [
       .when '/search',
         templateUrl: 'views/search.html'
         controller: 'SearchCtrl'
-      .when '/cinemas',
+      .when '/cinemas/:zipcode',
         templateUrl: 'views/cinemas.html'
         controller: 'CinemasCtrl'
       .otherwise
