@@ -1,1 +1,13 @@
-<input type="text" ng-model="search" class="form-control"/><br/><div infinite-scroll="loadMore()" class="row"><div ng-repeat="movie in movies | filter : { title : search }" class="col-lg-5 col-lg-4 repeat-item"><div class="thumbnail"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}" alt="..."/><div class="caption"><h3>{{movie.title}}</h3><p></p><p><a href="#/movie/{{movie.id}}" role="button" class="btn btn-primary">info</a><a href="#" role="button" class="btn btn-default">add</a></p></div></div></div></div>
+
+<input type="text" ng-model="search" class="form-control"/><br/>
+<div infinite-scroll="loadMore()" class="row">
+  <div ng-repeat="movie in movies | filter : { title : search }" class="col-lg-5 col-lg-4 repeat-item">
+    <div class="thumbnail"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}" alt="..."/>
+      <div class="caption">
+        <h3>{{movie.title}}</h3>
+        <p></p>
+        <p><a href="#/movie/{{movie.id}}" role="button" class="btn btn-primary">info</a><a href="#" role="button" class="btn btn-default">add</a></p>
+      </div>
+    </div>
+  </div>
+</div>
