@@ -1,6 +1,21 @@
 Watchlist web app
 ================
 
+##Technology stack:
+###Front-end
+[AngularJS](http://angularjs.org)  
+[CoffeeScript](http://coffeescript.org)(instead of Javascript)  
+[Jade](http://jade-lang.com)(instead of HTML)  
+[Bootstrap](http://getbootstrap.com)  
+
+###Back-end
+[Node.js](http://nodejs.org)  
+[Sails](http://sailsjs.org)  
+[Express.js](http://expressjs.com)  
+[socket.io](http://socket.io)  
+[MongoDB](http://www.mongodb.org)  
+
+User accounts are stored on our [server](http://watchlist-app-server.herokuapp.com/user). (Github [repo](https://github.com/Watchlist-App/watchlist-server))  
 Currently hosted on [heroku](http://watchlist-webapp.herokuapp.com/#/)  
 Movie data provided by [themoviedb](themoviedb.org)  
 Cinemas and tickets info provided by [fandango](fandango.com)
