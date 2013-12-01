@@ -1,5 +1,22 @@
 'use strict'
 
 angular.module('watchlistWebApp')
-  .service 'Fandango', () ->
-    # AngularJS will instantiate a singleton by calling "new" on this function
+  .service 'Fandango', (FeedLoader) ->
+
+    zipCode = '90210'
+    feedURL = "http://www.fandango.com/rss/moviesnearme_#{zipCode}.rss"
+    @feed = []
+
+
+    @newMovies = (callback) ->
+       FeedLoader.fetch
+          q: feedURL
+          num: 10
+        ,
+          {}
+        ,
+          (data) ->
+            callback data.responseData.feed
+
+    @
+
