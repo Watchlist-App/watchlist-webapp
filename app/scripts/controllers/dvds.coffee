@@ -1,9 +1,9 @@
 'use strict'
 
 angular.module('watchlistWebApp')
-  .controller 'DvdsCtrl', ($scope) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
+  .controller 'DvdsCtrl', ($scope, $routeParams, Amazon) ->
+
+
+    Amazon.getDvdsForMovieTitle "spartacus", (data) ->
+      $scope.dvds = data
+      console.log $scope.dvds
