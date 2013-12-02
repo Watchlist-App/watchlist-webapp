@@ -7,6 +7,6 @@
     ul
       li(ng-repeat="genre in movie.genres") {{genre.name}}
     p
-      a.btn.btn-primary(href="#", role="button") info
+      a.btn.btn-primary(href="#/dvds/{{movie.title}}", role="button") Order dvd
       a.btn.btn-default(href="#", role="button") add
   iframe(width="560", height="315", ng-src="{{trailerURL}}", frameborder="0", allowfullscreen)

@@ -3,6 +3,8 @@
 angular.module('watchlistWebApp')
   .controller 'DvdsCtrl', ($scope, $routeParams, Amazon) ->
 
-    Amazon.getDvds "spartacus", (data) ->
+    movieTitle = $routeParams.movieTitle
+
+    Amazon.getDvds movieTitle, (data) ->
       $scope.dvds = data
       console.log $scope.dvds
