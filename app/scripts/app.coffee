@@ -38,5 +38,8 @@ angular.module('watchlistWebApp', [
       .when '/dvds/:movieTitle',
         templateUrl: 'views/dvds.html'
         controller: 'DvdsCtrl'
+      .when '/itunes',
+        templateUrl: 'views/itunes.html'
+        controller: 'ItunesCtrl'
       .otherwise
         redirectTo: '/'
