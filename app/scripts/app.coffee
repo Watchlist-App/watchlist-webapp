@@ -35,5 +35,8 @@ angular.module('watchlistWebApp', [
       .when '/cinemas/:zipcode',
         templateUrl: 'views/cinemas.html'
         controller: 'CinemasCtrl'
+      .when '/dvds',
+        templateUrl: 'views/dvds.html'
+        controller: 'DvdsCtrl'
       .otherwise
         redirectTo: '/'
