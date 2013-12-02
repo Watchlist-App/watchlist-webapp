@@ -1,9 +1,10 @@
 'use strict'
 
 angular.module('watchlistWebApp')
-  .controller 'ItunesCtrl', ($scope) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
+  .controller 'ItunesCtrl', ($scope, $routeParams, Itunes) ->
+
+    movieTitle = $routeParams.movieTitle
+
+    Itunes.getOffers movieTitle, (data) ->
+      $scope.offers = data
+      console.log $scope.offers

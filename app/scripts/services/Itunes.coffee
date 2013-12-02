@@ -1,5 +1,21 @@
 'use strict'
 
 angular.module('watchlistWebApp')
-  .service 'Itunes', () ->
-    # AngularJS will instantiate a singleton by calling "new" on this function
+  .service 'Itunes', ($http) ->
+
+    baseURL = 'https://itunes.apple.com/search'
+
+    @getOffers = (title, callback) ->
+
+      $http
+        method: 'JSONP'
+        url: baseURL
+        params:
+          term: title
+          entity: "movie"
+          callback: "JSON_CALLBACK"
+      .
+        success (data, status, headers, config) ->
+          callback data.results
+
+    @

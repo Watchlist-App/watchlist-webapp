@@ -8,5 +8,5 @@
       li(ng-repeat="genre in movie.genres") {{genre.name}}
     p
       a.btn.btn-primary(href="#/dvds/{{movie.title}}", role="button") Order dvd
-      a.btn.btn-default(href="#", role="button") add
+      a.btn.btn-primary(href="#/itunes/{{movie.title}}", role="button") Buy on itunes
   iframe(width="560", height="315", ng-src="{{trailerURL}}", frameborder="0", allowfullscreen)

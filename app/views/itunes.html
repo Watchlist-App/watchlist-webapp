@@ -1,0 +1,6 @@
+
+<h2>iTunes offers</h2>
+<ul class="list-group">
+  <li ng-repeat="movie in offers" class="list-group-item repeat-item"><a href="{{movie.trackViewUrl}}"><img src="{{movie.artworkUrl100}}"/><strong>{{movie.trackName}}</strong>
+      <p>price - {{movie.trackPrice}}$</p></a></li>
+</ul>

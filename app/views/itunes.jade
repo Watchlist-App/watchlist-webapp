@@ -1,0 +1,7 @@
+h2 iTunes offers
+ul.list-group
+  li.list-group-item.repeat-item(ng-repeat="movie in offers")
+    a(href="{{movie.trackViewUrl}}")
+      img(src="{{movie.artworkUrl100}}")
+      strong {{movie.trackName}}
+      p price - {{movie.trackPrice}}$

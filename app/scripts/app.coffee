@@ -38,7 +38,7 @@ angular.module('watchlistWebApp', [
       .when '/dvds/:movieTitle',
         templateUrl: 'views/dvds.html'
         controller: 'DvdsCtrl'
-      .when '/itunes',
+      .when '/itunes/:movieTitle',
         templateUrl: 'views/itunes.html'
         controller: 'ItunesCtrl'
       .otherwise

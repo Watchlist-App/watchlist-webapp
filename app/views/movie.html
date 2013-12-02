@@ -7,7 +7,7 @@
     <ul>
       <li ng-repeat="genre in movie.genres">{{genre.name}}</li>
     </ul>
-    <p><a href="#/dvds/{{movie.title}}" role="button" class="btn btn-primary">Order dvd</a><a href="#" role="button" class="btn btn-default">add</a></p>
+    <p><a href="#/dvds/{{movie.title}}" role="button" class="btn btn-primary">Order dvd</a><a href="#/itunes/{{movie.title}}" role="button" class="btn btn-primary">Buy on itunes</a></p>
   </div>
   <iframe width="560" height="315" ng-src="{{trailerURL}}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 </div>
