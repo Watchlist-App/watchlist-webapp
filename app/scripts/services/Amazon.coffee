@@ -4,36 +4,15 @@ angular.module('watchlistWebApp')
 
   .service 'Amazon', ($http) ->
 
-    baseURL = "http://webservices.amazon.com/onca/xml"
-    awsSecretKey =  ""
-    service = "AWSECommerceService"
-    operation = "ItemSearch"
-    awsAccessKeyId = ""
-    associateTag = ""
-    version = "2011-08-01"
-    searchIndex = "DVD"
-    condition = "All"
-    keywords = "spartacus"
-    responseGroup = "Images,ItemAttributes,Offers"
-    timestamp = ""
+    baseURL = 'http://watchlist-app-server.herokuapp.com/amazon/dvds'
 
-    @getDvdsForMovieTitle = (title, callback) ->
+    @getDvds = (title, callback) ->
 
       $http
-        method: 'get'
+        method: 'GET'
         url: baseURL
         params:
-          "AWSSecretKey": awsSecretKey
-          "Service": service
-          "Operation": operation
-          "AWSAccessKeyId": awsAccessKeyId
-          "AssociateTag": associateTag
-          "Version": version
-          "SearchIndex": searchIndex
-          "Condition": condition
-          "Keywords": keywords
-          "ResponseGroup": responseGroup
-          "Timestamp": timestamp
+          title: title
       .
         success (data, status, headers, config) ->
           callback data

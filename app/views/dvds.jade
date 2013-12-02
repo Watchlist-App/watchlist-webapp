@@ -1,1 +1,6 @@
 h1 DVD
+.repeat-item(ng-repeat="dvd in dvds")
+  a(href="{{dvd.DetailPageURL[0]}}")
+    img(src="{{dvd.MediumImage[0].URL[0]}}")
+    p price - {{dvd.OfferSummary[0].LowestNewPrice[0].FormattedPrice[0]}}
+    h3 {{dvd.ItemAttributes[0].Title[0]}}
