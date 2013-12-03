@@ -35,7 +35,7 @@
         <li ng-class="{ active: isActive('/movies')}"><a ng-href="#/movies">Movies</a></li>
         <li ng-class="{ active: isActive('/search')}"><a ng-href="#/search">Search</a></li>
         <li ng-class="{ hidden: !user.email}">
-          <a ng-href="#">
+        <a ng-href="#/profile/{{user.id}}">
             <img ng-src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=40&d=mm" height="40" width="40" />
             {{user.name}}
           </a>
@@ -120,6 +120,7 @@
         <script src="scripts/services/SessionService.js"></script>
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/controllers/HeaderController.js"></script>
+        <script src="scripts/services/Listservice.js"></script>
         <!-- endbuild -->
 </body>
 </html>

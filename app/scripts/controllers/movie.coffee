@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('watchlistWebApp')
-  .controller 'MovieCtrl', ($scope, $routeParams, $sce, Themoviedb) ->
+  .controller 'MovieCtrl', ($scope, $routeParams, $sce, Themoviedb, Listservice, Sessionservice) ->
 
 
     Themoviedb.getMovie( $routeParams.movieId, (data) ->
@@ -13,3 +13,7 @@ angular.module('watchlistWebApp')
       $scope.trailerURL = $sce.trustAsResourceUrl("http://www.youtube.com/embed/" + trailerId)
 
     )
+
+    $scope.addToWatchlist = ->
+      Listservice.addMovie Sessionservice.authentificatedUser.id, "watchlist", $scope.movie.id, (data) ->
+        console.log data

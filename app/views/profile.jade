@@ -12,4 +12,5 @@
   ul.list-group
     li.list-group-item(ng-repeat="list in user.lists"){{list.title}}
       ul.list-group
-        li.list-group-item(ng-repeat="movieId in list.movies"){{movieId}}
+        li.list-group-item(ng-repeat="movieId in list.movies")
+          a(ng-href="#/movie/{{movieId}}"){{movieId}}

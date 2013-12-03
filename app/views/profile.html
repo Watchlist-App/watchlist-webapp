@@ -9,7 +9,7 @@
   <ul class="list-group">
     <li ng-repeat="list in user.lists" class="list-group-item">{{list.title}}
       <ul class="list-group">
-        <li ng-repeat="movieId in list.movies" class="list-group-item">{{movieId}}</li>
+        <li ng-repeat="movieId in list.movies" class="list-group-item"><a ng-href="#/movie/{{movieId}}">{{movieId}}</a></li>
       </ul>
     </li>
   </ul>

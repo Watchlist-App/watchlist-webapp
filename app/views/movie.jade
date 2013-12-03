@@ -9,4 +9,5 @@
     p
       a.btn.btn-primary(href="#/dvds/{{movie.title}}", role="button") Order dvd
       a.btn.btn-primary(href="#/itunes/{{movie.title}}", role="button") Buy on itunes
+      button.btn.btn-primary(ng-click="addToWatchlist()") Add to watchlist
   iframe(width="560", height="315", ng-src="{{trailerURL}}", frameborder="0", allowfullscreen)
