@@ -2,7 +2,7 @@
 <input type="text" ng-model="search" class="form-control"/><br/>
 <div infinite-scroll="loadMore()" class="row">
   <div masonry="masonry">
-    <div ng-repeat="movie in movies | filter : { title : search }" class="masonry-brick"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}" alt="..."/>
+    <div ng-repeat="movie in movies | filter : { title : search }" class="masonry-brick"><a href="#/movie/{{movie.id}}"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}" alt="..."/></a>
       <!-- .caption-->
       <!--   h3 {{movie.title}}-->
       <!--   p-->

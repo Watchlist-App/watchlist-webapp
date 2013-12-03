@@ -4,7 +4,8 @@ br
 .row(infinite-scroll="loadMore()")
   div(masonry)
     .masonry-brick(ng-repeat="movie in movies | filter : { title : search }")
-      img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}", alt="...")
+      a(href="#/movie/{{movie.id}}")
+        img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}", alt="...")
       // .caption
       //   h3 {{movie.title}}
       //   p
