@@ -10,6 +10,7 @@ angular.module('watchlistWebApp')
         Geolocation.getAddressByPosition position, (data) ->
           $scope.address = data
           console.log data
+          $scope.formData.address = data.results[2].formatted_address
 
     $scope.validateForm = ->
 

@@ -23,8 +23,12 @@
         span.help-block(ng-show="errorPassword") {{ errorPassword }}
 
       #address-group.form-group(ng-class="{ 'has-error' : errorAddress }")
-        input.form-control(type="text", name="address", placeholder="Address", ng-model="formData.address")
-        span.help-block(ng-show="errorAddress") {{ errorAddress }}
+        .input-group
+          span.input-group-btn
+            button.btn.btn-sm.btn-default(type="button", ng-click="detectLocation()")
+              span.glyphicon.glyphicon-screenshot auto
+          input.form-control(type="text", name="address", placeholder="Address", ng-model="formData.address")
+          span.help-block(ng-show="errorAddress") {{ errorAddress }}
 
       button.btn.btn-success.btn-lg.btn-block(type="submit")
         span.glyphicon.glyphicon-flash Submit!
