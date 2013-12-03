@@ -34,6 +34,14 @@
         <li ng-class="{ active: isActive('/users')}"><a ng-href="#/users">Users</a></li>
         <li ng-class="{ active: isActive('/movies')}"><a ng-href="#/movies">Movies</a></li>
         <li ng-class="{ active: isActive('/search')}"><a ng-href="#/search">Search</a></li>
+        <li ng-class="{ hidden: !user.email}">
+          <a ng-href="#">
+            <img ng-src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=40&d=mm" height="40" width="40" />
+            {{user.name}}
+          </a>
+        </li>
+        <li ng-class="{ hidden: user.email }"><a ng-href="#/login">Log in</a></li>
+        <li ng-class="{ hidden: !user.email }"><a ng-href="#/search">Log out</a></li>
       </ul>
       <h3 class="text-muted">Watchlist web</h3>
     </div>

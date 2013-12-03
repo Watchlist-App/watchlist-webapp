@@ -3,18 +3,27 @@
 angular.module('watchlistWebApp')
   .service 'Sessionservice', ($cookies) ->
 
-    authentificatedUserId = $cookies.authentificatedUserId
-    console.log authentificatedUserId
+    @authentificatedUser =
+      name: $cookies.username
+      email: $cookies.email
+      id: $cookies.id
 
-    @setAuthentificatedUserId = (id) ->
-      $cookies.authentificatedUserId = id
-      authentificatedUserId = id
+    console.log @authentificatedUser
 
-    @getAuthentificatedUserId = ->
-      authentificatedUserId
+    @logIn = (user) ->
+      @authentificatedUser =
+        name: user.name
+        email: user.email
+        id: user.id
+      $cookies.username = user.name
+      $cookies.email = user.email
+      $cookies.id = user.id
 
     @logOut = ->
-      $cookies.authentificatedUserId = ""
+      delete $cookies.username
+      delete $cookies.email
+      delete $cookies.id
+      @authentificatedUser = NULL
 
 
     @

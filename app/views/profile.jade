@@ -3,7 +3,7 @@
   h1 {{user.name}}
   p email - {{user.email}}
   p password - {{user.password}}
-  button.btn.btn-large.btn-info edit
+  button.btn.btn-large.btn-info(ng-click="logIn()") login
   span 
   button.btn.btn-large.btn-danger(ng-click="deleteUser()") delete
   br
