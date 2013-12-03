@@ -1,0 +1,19 @@
+.container
+  .jumbotron
+    .page-header
+      h2 Login
+
+    #messages.alert(ng-show="errorMessage", ng-class="{'alert-danger': errorMessage}") {{ errorMessage }}
+
+    form(ng-submit="processForm()")
+
+      #email-group.form-group(ng-class="{ 'has-error' : errorEmail }")
+        input.form-control(type="text", name="email", placeholder="Email", ng-model="email")
+        span.help-block(ng-show="errorEmail") {{ errorEmail }}
+
+      #password-group.form-group(ng-class="{ 'has-error' : errorPassword, 'has-success' : validationSuccessful }")
+        input.form-control(type="text", name="password", placeholder="Password", ng-model="password")
+        span.help-block(ng-show="errorPassword") {{ errorPassword }}
+
+      button.btn.btn-success.btn-lg.btn-block(type="submit")
+        span.glyphicon.glyphicon-flash Login!

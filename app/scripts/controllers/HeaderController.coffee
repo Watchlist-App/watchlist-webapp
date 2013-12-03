@@ -5,6 +5,7 @@ angular.module('watchlistWebApp')
 
     $scope.isActive = (viewLocation) ->
       $scope.user = Sessionservice.authentificatedUser
+      console.log $scope.user
       viewLocation == $location.path()
 
     $scope.user = Sessionservice.authentificatedUser

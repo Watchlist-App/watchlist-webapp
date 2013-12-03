@@ -23,7 +23,7 @@ angular.module('watchlistWebApp')
       delete $cookies.username
       delete $cookies.email
       delete $cookies.id
-      @authentificatedUser = NULL
+      @authentificatedUser = {}
 
 
     @

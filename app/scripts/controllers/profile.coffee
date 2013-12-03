@@ -13,6 +13,3 @@ angular.module('watchlistWebApp')
     $scope.logIn = ->
       Sessionservice.logIn $scope.user
       console.log Sessionservice.authentificatedUser
-
-    $scope.logOut = ->
-      Sessionservice.logOut()
