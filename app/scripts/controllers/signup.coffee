@@ -5,6 +5,10 @@ angular.module('watchlistWebApp')
 
     $scope.formData = {}
 
+    $scope.detectLocation = ->
+      window.navigator.geolocation.getCurrentPosition (position) ->
+        $scope.formData.address = position
+
     $scope.validateForm = ->
 
       if ($scope.formData.password != $scope.formData.confirmation)

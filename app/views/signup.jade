@@ -24,6 +24,7 @@
 
       #address-group.form-group(ng-class="{ 'has-error' : errorAddress }")
         input.form-control(type="text", name="address", placeholder="Address", ng-model="formData.address")
+        button.btn.btn-success.btn-sm.btn-block(ng-click="detectLocation()") autodetect
         span.help-block(ng-show="errorAddress") {{ errorAddress }}
 
       button.btn.btn-success.btn-lg.btn-block(type="submit")

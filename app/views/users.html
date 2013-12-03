@@ -3,5 +3,5 @@
 <label for="search" class="control-label">search</label>
 <input id="search" type="text" ng-model="search" class="form-control"/><br/>
 <ul class="list-group">
-  <li ng-repeat="user in users | filter : search" class="list-group-item repeat-item"><a href="#profile/{{user.id}}">{{user.name}} - {{user.email}}</a></li>
+  <li ng-repeat="user in users | filter : search" class="list-group-item repeat-item"><img ng-src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=70&amp;d=mm" height="70" width="70"/><a href="#profile/{{user.id}}">{{user.name}} - {{user.email}}</a></li>
 </ul>

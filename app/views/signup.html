@@ -17,7 +17,8 @@
         <input type="text" name="passwordConfirmation" placeholder="Password confirmation" ng-model="formData.confirmation" class="form-control"/><span ng-show="errorPassword" class="help-block">{{ errorPassword }}</span>
       </div>
       <div id="address-group" ng-class="{ 'has-error' : errorAddress }" class="form-group">
-        <input type="text" name="address" placeholder="Address" ng-model="formData.address" class="form-control"/><span ng-show="errorAddress" class="help-block">{{ errorAddress }}</span>
+        <input type="text" name="address" placeholder="Address" ng-model="formData.address" class="form-control"/>
+        <button ng-click="detectLocation()" class="btn btn-success btn-sm btn-block">autodetect</button><span ng-show="errorAddress" class="help-block">{{ errorAddress }}</span>
       </div>
       <button type="submit" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-flash">Submit!</span></button>
     </form>
