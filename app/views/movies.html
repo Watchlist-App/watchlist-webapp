@@ -1,7 +1,11 @@
 
 <input type="text" ng-model="search" class="form-control"/><br/>
 <div infinite-scroll="loadMore()" class="row">
-  <div ng-repeat="movie in movies | filter : { title : search }" class="col-lg-5 col-lg-4 repeat-item">
+
+<div id="container" class="js-masonry"  
+  data-masonry-options='{ "itemSelector": ".repeat-item" }'>
+  
+  <div ng-repeat="movie in movies | filter : { title : search }" class="col-md-4 col-sm-4 repeat-item">
     <div class="thumbnail"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}" alt="..."/>
       <div class="caption">
         <h3>{{movie.title}}</h3>
@@ -10,4 +14,7 @@
       </div>
     </div>
   </div>
+  
+</div> <!-- masonry container -->
+
 </div>

@@ -1,17 +1,20 @@
 /* --------------------------------------------
 	Base
 -------------------------------------------- */
-html,body {
+html,
+body {
 	height: 100%;
 }
 
 .container {
 	min-height: 100%;
+	max-width: 1110px!important;
 	padding-top: 70px;
 	padding-bottom: 90px;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
 	font-family: 'Trebuchet MS', Arial;
 	text-shadow: #E0E0DB 1px 1px 0px, 2px 2px #CDCDCD;
 }
@@ -41,6 +44,7 @@ iframe {
 	border-color: #C5C5C5;
 	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
 }
+
 .btn {
 	display: inline-block;
 	padding: 4px 12px;
@@ -182,9 +186,21 @@ iframe {
 	border: none;
 }
 
-.thumbnail p a {
+.thumbnail  p a {
 	margin-right: 5px;
 }
+/* no-script
+.thumbnail .ng-binding {
+	max-height: 78px;
+	overflow: hidden;
+}
+
+.thumbnail .caption {
+	min-height: 166px;
+}*/
+
+.repeat-item 	{ width: 25%; }  
+.repeat-item.w2 { width: 50%; }
 
 /* --------------------------------------------
 	Footer
