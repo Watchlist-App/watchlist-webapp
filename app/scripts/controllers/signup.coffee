@@ -1,13 +1,15 @@
 'use strict'
 
 angular.module('watchlistWebApp')
-  .controller 'SignupCtrl', ($scope, $http) ->
+  .controller 'SignupCtrl', ($scope, $http, Geolocation) ->
 
     $scope.formData = {}
 
     $scope.detectLocation = ->
       window.navigator.geolocation.getCurrentPosition (position) ->
-        $scope.formData.address = position
+        Geolocation.getAddressByPosition position, (data) ->
+          $scope.address = data
+          console.log data
 
     $scope.validateForm = ->
 
