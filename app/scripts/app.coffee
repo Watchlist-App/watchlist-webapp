@@ -42,5 +42,8 @@ angular.module('watchlistWebApp', [
       .when '/itunes/:movieTitle',
         templateUrl: 'views/itunes.html'
         controller: 'ItunesCtrl'
+      .when '/login',
+        templateUrl: 'views/login.html'
+        controller: 'LoginCtrl'
       .otherwise
         redirectTo: '/'

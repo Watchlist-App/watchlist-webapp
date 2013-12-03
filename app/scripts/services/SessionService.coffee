@@ -1,5 +1,20 @@
 'use strict'
 
 angular.module('watchlistWebApp')
-  .service 'Sessionservice', () ->
-    # AngularJS will instantiate a singleton by calling "new" on this function
+  .service 'Sessionservice', ($cookies) ->
+
+    authentificatedUserId = $cookies.authentificatedUserId
+    console.log authentificatedUserId
+
+    @setAuthentificatedUserId = (id) ->
+      $cookies.authentificatedUserId = id
+      authentificatedUserId = id
+
+    @getAuthentificatedUserId = ->
+      authentificatedUserId
+
+    @logOut = ->
+      $cookies.authentificatedUserId = ""
+
+
+    @

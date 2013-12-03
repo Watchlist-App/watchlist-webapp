@@ -29,11 +29,11 @@
 
     <!-- header -->
     <div class="header">
-      <ul class="nav nav-pills pull-right">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#/users">Users</a></li>
-        <li><a ng-href="#/movies">Movies</a></li>
-        <li><a ng-href="#/search">Search</a></li>
+      <ul class="nav nav-pills pull-right" ng-controller="HeaderController">
+        <li ng-class="{ active: isActive('/')}"><a ng-href="#">Home</a></li>
+        <li ng-class="{ active: isActive('/users')}"><a ng-href="#/users">Users</a></li>
+        <li ng-class="{ active: isActive('/movies')}"><a ng-href="#/movies">Movies</a></li>
+        <li ng-class="{ active: isActive('/search')}"><a ng-href="#/search">Search</a></li>
       </ul>
       <h3 class="text-muted">Watchlist web</h3>
     </div>
@@ -110,6 +110,8 @@
         <script src="scripts/controllers/itunes.js"></script>
         <script src="scripts/services/Geolocation.js"></script>
         <script src="scripts/services/SessionService.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/HeaderController.js"></script>
         <!-- endbuild -->
 </body>
 </html>
