@@ -6,6 +6,7 @@ angular.module('watchlistWebApp', [
   'ngSanitize',
   'ngRoute',
   'ngAnimate',
+  'wu.masonry',
   'infinite-scroll',
   'angular-md5'
 ])

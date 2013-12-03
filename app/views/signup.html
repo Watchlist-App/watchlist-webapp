@@ -1,1 +1,28 @@
-<div class="container"><div class="jumbotron"><div class="page-header"><h2>Create account</h2></div><div id="messages" ng-show="errorMessage" ng-class="{'alert-danger': errorMessage}" class="alert">{{ errorMessage }}</div><form ng-submit="processForm()"><div id="name-group" ng-class="{ 'has-error' : errorName }" class="form-group"><input type="text" name="name" placeholder="Name" ng-model="formData.name" class="form-control"/><span ng-show="errorName" class="help-block">{{ errorName }}</span></div><div id="email-group" ng-class="{ 'has-error' : errorEmail }" class="form-group"><input type="text" name="email" placeholder="Email" ng-model="formData.email" class="form-control"/><span ng-show="errorEmail" class="help-block">{{ errorEmail }}</span></div><div id="password-group" ng-class="{ 'has-error' : errorPassword, 'has-success' : validationSuccessful }" class="form-group"><input type="text" name="password" placeholder="Password" ng-model="formData.password" class="form-control"/><span class="help-block"></span><input type="text" name="passwordConfirmation" placeholder="Password confirmation" ng-model="formData.confirmation" class="form-control"/><span ng-show="errorPassword" class="help-block">{{ errorPassword }}</span></div><div id="address-group" ng-class="{ 'has-error' : errorAddress }" class="form-group"><div class="input-group"><span class="input-group-btn"><button type="button" ng-click="detectLocation()" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-screenshot">auto</span></button></span><input type="text" name="address" placeholder="Address" ng-model="formData.address" class="form-control"/><span ng-show="errorAddress" class="help-block">{{ errorAddress }}</span></div></div><button type="submit" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-flash">Submit!</span></button></form></div></div>
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="page-header">
+      <h2>Create account</h2>
+    </div>
+    <div id="messages" ng-show="errorMessage" ng-class="{'alert-danger': errorMessage}" class="alert">{{ errorMessage }}</div>
+    <form ng-submit="processForm()">
+      <div id="name-group" ng-class="{ 'has-error' : errorName }" class="form-group">
+        <input type="text" name="name" placeholder="Name" ng-model="formData.name" class="form-control"/><span ng-show="errorName" class="help-block">{{ errorName }}</span>
+      </div>
+      <div id="email-group" ng-class="{ 'has-error' : errorEmail }" class="form-group">
+        <input type="text" name="email" placeholder="Email" ng-model="formData.email" class="form-control"/><span ng-show="errorEmail" class="help-block">{{ errorEmail }}</span>
+      </div>
+      <div id="password-group" ng-class="{ 'has-error' : errorPassword, 'has-success' : validationSuccessful }" class="form-group">
+        <input type="text" name="password" placeholder="Password" ng-model="formData.password" class="form-control"/><span class="help-block"></span>
+        <input type="text" name="passwordConfirmation" placeholder="Password confirmation" ng-model="formData.confirmation" class="form-control"/><span ng-show="errorPassword" class="help-block">{{ errorPassword }}</span>
+      </div>
+      <div id="address-group" ng-class="{ 'has-error' : errorAddress }" class="form-group">
+        <div class="input-group"><span class="input-group-btn">
+            <button type="button" ng-click="detectLocation()" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-screenshot">auto</span></button></span>
+          <input type="text" name="address" placeholder="Address" ng-model="formData.address" class="form-control"/><span ng-show="errorAddress" class="help-block">{{ errorAddress }}</span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-flash">Submit!</span></button>
+    </form>
+  </div>
+</div>
