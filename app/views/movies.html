@@ -1,8 +1,15 @@
 
 <input type="text" ng-model="search" class="form-control"/><br/>
+<div class="btn-group btn-group-lg">
+  <button type="button" ng-click="setSize(1)" ng-class="{active: isActive(1)}" class="btn btn-default">tiny</button>
+  <button type="button" ng-click="setSize(2)" ng-class="{active: isActive(2)}" class="btn btn-default">small</button>
+  <button type="button" ng-click="setSize(3)" ng-class="{active: isActive(3)}" class="btn btn-default">medium</button>
+  <button type="button" ng-click="setSize(4)" ng-class="{active: isActive(4)}" class="btn btn-default">large</button>
+  <button type="button" ng-click="setSize(5)" ng-class="{active: isActive(5)}" class="btn btn-default">very large</button>
+</div><br/><br/>
 <div infinite-scroll="loadMore()" class="row">
   <div masonry="masonry">
-    <div ng-repeat="movie in movies | filter : { title : search }" class="masonry-brick"><a href="#/movie/{{movie.id}}"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}" alt="..."/></a>
+    <div ng-repeat="movie in movies | filter : { title : search }" class="masonry-brick"><a href="#/movie/{{movie.id}}"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/{{imageSize}}/{{ movie.poster_path }}" alt="..."/></a>
       <!-- .caption-->
       <!--   h3 {{movie.title}}-->
       <!--   p-->

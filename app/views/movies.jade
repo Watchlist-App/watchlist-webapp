@@ -1,11 +1,21 @@
 input.form-control(type="text", ng-model="search")
 br
 
+.btn-group.btn-group-lg
+  button.btn.btn-default(type="button", ng-click="setSize(1)", ng-class="{active: isActive(1)}") tiny
+  button.btn.btn-default(type="button", ng-click="setSize(2)", ng-class="{active: isActive(2)}") small
+  button.btn.btn-default(type="button", ng-click="setSize(3)", ng-class="{active: isActive(3)}") medium
+  button.btn.btn-default(type="button", ng-click="setSize(4)", ng-class="{active: isActive(4)}") large
+  button.btn.btn-default(type="button", ng-click="setSize(5)", ng-class="{active: isActive(5)}") very large
+
+br
+br
+
 .row(infinite-scroll="loadMore()")
   div(masonry)
     .masonry-brick(ng-repeat="movie in movies | filter : { title : search }")
       a(href="#/movie/{{movie.id}}")
-        img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}", alt="...")
+        img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/{{imageSize}}/{{ movie.poster_path }}", alt="...")
       // .caption
       //   h3 {{movie.title}}
       //   p
