@@ -7,6 +7,10 @@
     <ul>
       <li ng-repeat="genre in movie.genres">{{genre.name}}</li>
     </ul>
+    <h4>production companies:</h4>
+    <ul>
+      <li ng-repeat="company in movie.production_companies"><a ng-href="#/company/{{company.id}}">{{company.name}}</a></li>
+    </ul>
     <p><a href="#/dvds/{{movie.title}}" role="button" class="btn btn-primary">Order dvd</a><a href="#/itunes/{{movie.title}}" role="button" class="btn btn-primary">Buy on itunes</a>
       <button ng-click="addToWatchlist()" class="btn btn-primary">Add to watchlist</button>
     </p>

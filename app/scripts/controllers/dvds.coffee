@@ -7,4 +7,3 @@ angular.module('watchlistWebApp')
 
     Amazon.getDvds movieTitle, (data) ->
       $scope.dvds = data
-      console.log $scope.dvds

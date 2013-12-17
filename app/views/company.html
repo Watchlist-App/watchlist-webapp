@@ -1,0 +1,12 @@
+
+<div class="thumbnail"><a ng-href="{{company.homepage}}"><img src="{{logo}}"/></a>
+  <div class="caption">
+    <h3>{{company.name}}</h3>
+    <p>{{company.description}}</p>
+  </div>
+  <h1>movies</h1>
+  <ul>
+    <li ng-repeat="movie in movies"><a ng-href="#/movie/{{movie.id}}"> 
+        <h4>{{movie.title}}</h4><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w92/{{ movie.poster_path }}"/></a></li>
+  </ul>
+</div>

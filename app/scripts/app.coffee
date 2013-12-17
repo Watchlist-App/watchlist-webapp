@@ -45,5 +45,8 @@ angular.module('watchlistWebApp', [
       .when '/login',
         templateUrl: 'views/login.html'
         controller: 'LoginCtrl'
+      .when '/company/:companyId',
+        templateUrl: 'views/company.html'
+        controller: 'CompanyCtrl'
       .otherwise
         redirectTo: '/'

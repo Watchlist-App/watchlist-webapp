@@ -29,7 +29,6 @@ angular.module('watchlistWebApp')
         params:
           api_key: apiKey
           append_to_response: 'trailers'
-          id: id
       .
         success (data, status, headers, config) ->
           callback data
@@ -46,6 +45,27 @@ angular.module('watchlistWebApp')
         success (data, status, headers, config) ->
           callback data
 
+    @getCompany = (id, callback) ->
+
+      $http
+        method: 'GET'
+        url: baseURL + 'company/' + id
+        params:
+          api_key: apiKey
+      .
+        success (data, status, headers, config) ->
+          callback data
+
+    @getMoviesForCompany = (id, callback) ->
+
+      $http
+        method: 'GET'
+        url: baseURL + 'company/' + id + '/movies'
+        params:
+          api_key: apiKey
+      .
+        success (data, status, headers, config) ->
+          callback data
 
     @
 

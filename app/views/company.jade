@@ -1,0 +1,12 @@
+.thumbnail
+  a(ng-href="{{company.homepage}}")
+    img(src="{{logo}}")
+  .caption
+    h3 {{company.name}}
+    p {{company.description}}
+  h1 movies
+  ul
+    li(ng-repeat="movie in movies")
+      a(ng-href="#/movie/{{movie.id}}") 
+        h4 {{movie.title}}
+        img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w92/{{ movie.poster_path }}")
