@@ -67,6 +67,28 @@ angular.module('watchlistWebApp')
         success (data, status, headers, config) ->
           callback data
 
+    @getGenre = (id, callback) ->
+
+      $http
+        method: 'GET'
+        url: baseURL + 'genre/' + id
+        params:
+          api_key: apiKey
+      .
+        success (data, status, headers, config) ->
+          callback data
+
+    @getMoviesForGenre = (id, callback) ->
+
+      $http
+        method: 'GET'
+        url: baseURL + 'genre/' + id + '/movies'
+        params:
+          api_key: apiKey
+      .
+        success (data, status, headers, config) ->
+          callback data
+
     @
 
 

@@ -1,0 +1,7 @@
+h1 {{genre}}
+h3 movies
+ul
+  li(ng-repeat="movie in movies")
+    a(ng-href="#/movie/{{movie.id}}")
+      h4 {{movie.title}}
+      img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w92/{{ movie.poster_path }}")

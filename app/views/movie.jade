@@ -5,7 +5,8 @@
     p {{movie.overview}}
     h4 genres:
     ul
-      li(ng-repeat="genre in movie.genres") {{genre.name}}
+      li(ng-repeat="genre in movie.genres") 
+        a(ng-href="#/genre/{{genre.id}}"){{genre.name}}
     h4 production companies:
     ul
       li(ng-repeat="company in movie.production_companies")

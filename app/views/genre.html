@@ -1,0 +1,7 @@
+
+<h1>{{genre}}</h1>
+<h3>movies</h3>
+<ul>
+  <li ng-repeat="movie in movies"><a ng-href="#/movie/{{movie.id}}">
+      <h4>{{movie.title}}</h4><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w92/{{ movie.poster_path }}"/></a></li>
+</ul>

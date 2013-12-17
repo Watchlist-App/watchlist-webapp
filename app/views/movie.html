@@ -5,7 +5,7 @@
     <p>{{movie.overview}}</p>
     <h4>genres:</h4>
     <ul>
-      <li ng-repeat="genre in movie.genres">{{genre.name}}</li>
+      <li ng-repeat="genre in movie.genres"> <a ng-href="#/genre/{{genre.id}}">{{genre.name}}</a></li>
     </ul>
     <h4>production companies:</h4>
     <ul>
