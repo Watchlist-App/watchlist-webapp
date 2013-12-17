@@ -13,12 +13,8 @@ br
 
 .row(infinite-scroll="loadMore()")
   div(masonry)
-    .masonry-brick(ng-repeat="movie in movies | filter : { title : search }")
+    .masonry-brick.thumbnail(ng-repeat="movie in movies | filter : { title : search }")
       a(href="#/movie/{{movie.id}}")
         img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/{{imageSize}}/{{ movie.poster_path }}", alt="...")
-      // .caption
-      //   h3 {{movie.title}}
-      //   p
-      //   p
-      //     a.btn.btn-primary(href="#/movie/{{movie.id}}", role="button") info
-      //     a.btn.btn-default(href="#", role="button") add
+      .caption
+        h5 {{movie.title}}

@@ -16,4 +16,7 @@ angular.module('watchlistWebApp')
 
     $scope.addToWatchlist = ->
       Listservice.addMovie Sessionservice.authentificatedUser.id, "watchlist", $scope.movie.id, (data) ->
-        console.log data
+
+    $scope.actorPhoto = (path) ->
+      photo = Themoviedb.imageURL + Themoviedb.imageTiny + path
+

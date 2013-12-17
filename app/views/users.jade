@@ -4,7 +4,9 @@ label.control-label(for="search") search
 input#search.form-control(type="text", ng-model="search")
 br
 
-ul.list-group
-  li.list-group-item.repeat-item(ng-repeat='user in users | filter : search')
-    img(ng-src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=70&d=mm", height="70", width="70")
-    a(href="#profile/{{user.id}}"){{user.name}} - {{user.email}}
+.row
+  div(masonry)
+    .masonry-brick.thumbnail(ng-repeat="user in users | filter : search")
+      a(href="#profile/{{user.id}}")
+        img(ng-src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=150&d=mm", height="150", width="150")
+        h5 {{user.name}}

@@ -9,13 +9,10 @@
 </div><br/><br/>
 <div infinite-scroll="loadMore()" class="row">
   <div masonry="masonry">
-    <div ng-repeat="movie in movies | filter : { title : search }" class="masonry-brick"><a href="#/movie/{{movie.id}}"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/{{imageSize}}/{{ movie.poster_path }}" alt="..."/></a>
-      <!-- .caption-->
-      <!--   h3 {{movie.title}}-->
-      <!--   p-->
-      <!--   p-->
-      <!--     a.btn.btn-primary(href="#/movie/{{movie.id}}", role="button") info-->
-      <!--     a.btn.btn-default(href="#", role="button") add-->
+    <div ng-repeat="movie in movies | filter : { title : search }" class="masonry-brick thumbnail"><a href="#/movie/{{movie.id}}"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/{{imageSize}}/{{ movie.poster_path }}" alt="..."/></a>
+      <div class="caption">
+        <h5>{{movie.title}}</h5>
+      </div>
     </div>
   </div>
 </div>
