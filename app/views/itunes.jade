@@ -1,10 +1,9 @@
 h2 iTunes offers
 
-.row
-  div(masonry)
-    .masonry-brick.thumbnail(ng-repeat="movie in offers")
-      a(href="{{movie.trackViewUrl}}")
-        img(src="{{movie.artworkUrl100}}")
-      .caption
-        h5 {{movie.trackName}}
-        h5 price - {{movie.trackPrice}}$
+div(masonry)
+  .masonry-brick(ng-repeat="movie in offers")
+    a(href="{{movie.trackViewUrl}}")
+      img(src="{{movie.artworkUrl100}}")
+    // .caption
+      h5 {{movie.trackName}}
+      h5 price - {{movie.trackPrice}}$

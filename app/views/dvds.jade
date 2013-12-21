@@ -1,10 +1,7 @@
 h2 Offers from Amazon
-      .caption
-.row
-  div(masonry)
-    .masonry-brick.thumbnail(ng-repeat="dvd in dvds")
-      a(href="{{dvd.DetailPageURL[0]}}")
-        img(src="{{dvd.MediumImage[0].URL[0]}}")
-      .caption
-        // h5 {{dvd.ItemAttributes[0].Title[0]}}
-        h5 price - {{dvd.OfferSummary[0].LowestNewPrice[0].FormattedPrice[0]}}
+div(masonry)
+  .masonry-brick(ng-repeat="dvd in dvds")
+    a(href="{{dvd.DetailPageURL[0]}}")
+      img(src="{{dvd.MediumImage[0].URL[0]}}")
+    // .caption
+      h5 price - {{dvd.OfferSummary[0].LowestNewPrice[0].FormattedPrice[0]}}
