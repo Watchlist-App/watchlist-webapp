@@ -26,10 +26,9 @@ angular.module('watchlistWebApp')
     $scope.loadMore = () ->
       if ready
         ready = no
-        Themoviedb.popularMovies(page, (data) ->
-          $scope.movies = $scope.movies.concat(data.results)
+        Themoviedb.popularMovies page, (movies) ->
+          $scope.movies = $scope.movies.concat movies.results
           ready = yes
           page++
-        )
 
     $scope.loadMore()

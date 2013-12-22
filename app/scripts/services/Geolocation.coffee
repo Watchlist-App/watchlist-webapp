@@ -6,9 +6,7 @@ angular.module('watchlistWebApp')
     baseURL = 'http://maps.googleapis.com/maps/api/geocode/json'
 
     @getAddressByPosition = (position, callback) ->
-
       latlng = position.coords.latitude + ',' + position.coords.longitude
-      console.log latlng
 
       $http
         method: 'GET'

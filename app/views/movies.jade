@@ -11,7 +11,7 @@ br
 br
 br
 
-.(infinite-scroll="loadMore()", masonry="{ transitionDuration: '1s' }")
+div(infinite-scroll="loadMore()", masonry="{ transitionDuration: '1s' }")
   .masonry-brick(ng-repeat="movie in movies | filter : { title : search }")
     a(href="#/movie/{{movie.id}}")
       img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/{{imageSize}}/{{ movie.poster_path }}", alt="...")

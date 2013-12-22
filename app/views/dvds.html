@@ -1,14 +1,9 @@
 
-<h2>Offers from Amazon
-  <div class="caption"></div>
-</h2>
-<div class="row">
-  <div masonry="masonry">
-    <div ng-repeat="dvd in dvds" class="masonry-brick thumbnail"><a href="{{dvd.DetailPageURL[0]}}"><img src="{{dvd.MediumImage[0].URL[0]}}"/></a>
-      <div class="caption">
-        <!-- h5 {{dvd.ItemAttributes[0].Title[0]}}-->
-        <h5>price - {{dvd.OfferSummary[0].LowestNewPrice[0].FormattedPrice[0]}}</h5>
-      </div>
-    </div>
+<h2>Offers from Amazon</h2>
+<div masonry="masonry">
+  <div ng-repeat="dvd in dvds" class="masonry-brick"><a href="{{dvd.DetailPageURL[0]}}"><img src="{{dvd.MediumImage[0].URL[0]}}"/></a>
+    <!-- .caption
+    <h5>price - {{dvd.OfferSummary[0].LowestNewPrice[0].FormattedPrice[0]}}</h5>
+    -->
   </div>
 </div>

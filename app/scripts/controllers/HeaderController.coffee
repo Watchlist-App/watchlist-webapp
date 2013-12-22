@@ -3,11 +3,10 @@
 angular.module('watchlistWebApp')
   .controller 'HeaderController', ($scope, $location, Sessionservice) ->
 
-    $scope.isActive = (viewLocation) ->
-      $scope.user = Sessionservice.authentificatedUser
-      viewLocation == $location.path()
+    $scope.session = Sessionservice
 
-    $scope.user = Sessionservice.authentificatedUser
+    $scope.isActive = (viewLocation) ->
+      viewLocation == $location.path()
 
     $scope.logOut = ->
       Sessionservice.logOut()

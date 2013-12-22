@@ -2,10 +2,9 @@ h1 Search
 
 input.form-control(type="text", ng-model="searchPhrase", ng-change="search()")
 
-.row(infinite-scroll="loadMore()")
-  div(masonry)
-    .masonry-brick.thumbnail(ng-repeat="movie in results")
-      a(href="#movie/{{movie.id}}")
-        img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w185/{{ movie.poster_path }}")
-      .caption
-        h5 {{movie.title}}
+div(masonry)
+  .masonry-brick(ng-repeat="movie in results")
+    a(href="#movie/{{movie.id}}")
+      img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w185/{{ movie.poster_path }}")
+    .caption
+      h5 {{movie.title}}

@@ -34,14 +34,14 @@
         <li ng-class="{ active: isActive('/users')}"><a ng-href="#/users">Users</a></li>
         <li ng-class="{ active: isActive('/movies')}"><a ng-href="#/movies">Movies</a></li>
         <li ng-class="{ active: isActive('/search')}"><a ng-href="#/search">Search</a></li>
-        <li ng-class="{ hidden: !user.email}">
-        <a ng-href="#/profile/{{user.id}}">
-            <img ng-src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=40&d=mm" height="40" width="40" />
-            {{user.name}}
+        <li ng-class="{ hidden: !session.authentificatedUser.email}">
+        <a ng-href="#/profile/{{session.authentificatedUser.id}}">
+            <img ng-src="http://www.gravatar.com/avatar/{{session.authentificatedUser.email | gravatar}}?s=40&d=mm" height="40" width="40" />
+            {{session.authentificatedUser.name}}
           </a>
         </li>
-        <li ng-class="{ hidden: user.email }"><a ng-href="#/login">Log in</a></li>
-        <li ng-class="{ hidden: !user.email }"><a ng-href="#/" ng-click="logOut()">Log out</a></li>
+        <li ng-class="{ hidden: session.authentificatedUser.email }"><a ng-href="#/login">Log in</a></li>
+        <li ng-class="{ hidden: !session.authentificatedUser.email }"><a ng-href="#/" ng-click="logOut()">Log out</a></li>
       </ul>
       <h3 class="text-muted">Watchlist web</h3>
     </div>

@@ -1,22 +1,39 @@
 'use strict'
 
 angular.module('watchlistWebApp')
-  .controller 'LoginCtrl', ($scope, $http, Sessionservice, $location) ->
+  .controller 'LoginCtrl', ($scope, $http, Sessionservice, $location, Userservice) ->
 
+    user = null
 
     $scope.processForm = ->
-      if !$scope.email then !$scope.email = "nope"
-      $http
-        method: 'GET'
-        url: 'http://watchlist-app-server.herokuapp.com/user'
-        params:
-          email: $scope.email
-      .success (data) ->
-        if (!data[0] or !$scope.email)
-          $scope.errorEmail = "please enter valid email"
-        else if (data[0].password != $scope.password)
-          $scope.errorEmail = ""
-          $scope.errorPassword = "invalid password"
-        else
-          Sessionservice.logIn data[0]
-          $location.path ('/profile/' + data[0].id)
+      clearErrors()
+      if emailEntered()
+        sendForm ->
+          if userExists() and passwordCorrect() then logIn()
+
+
+    clearErrors = ->
+      delete $scope.errorEmail
+      delete $scope.errorPassword
+
+    logIn = ->
+      Sessionservice.logIn user
+      $location.path ('/profile/' + user.id)
+
+    userExists = ->
+      $scope.errorEmail = "user not found" unless user?
+      yes unless $scope.errorEmail?
+
+    passwordCorrect = ->
+      $scope.errorPassword = "invalid password" unless user.password is $scope.password
+      yes unless $scope.errorPassword?
+
+    emailEntered = ->
+      $scope.errorEmail = "please enter email" unless $scope.email? and $scope.email isnt ''
+      yes unless $scope.errorEmail?
+
+    sendForm = (callback) ->
+      user = null
+      Userservice.query {email: $scope.email}, (response) ->
+        user = response[0] if response[0]?
+        callback()

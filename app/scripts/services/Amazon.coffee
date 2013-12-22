@@ -1,7 +1,6 @@
 'use strict'
 
 angular.module('watchlistWebApp')
-
   .service 'Amazon', ($http) ->
 
     baseURL = 'http://watchlist-app-server.herokuapp.com/amazon/dvds'

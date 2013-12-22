@@ -37,7 +37,7 @@ angular.module('watchlistWebApp')
         success (data, status, headers, config) ->
           callback data
 
-    @searchMovie = (phrase, callback) ->
+    @searchForMovie = (phrase, callback) ->
 
       $http
         method: 'GET'

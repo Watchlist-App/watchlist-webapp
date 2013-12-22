@@ -5,5 +5,5 @@ angular.module('watchlistWebApp')
 
     movieTitle = $routeParams.movieTitle
 
-    Amazon.getDvds movieTitle, (data) ->
-      $scope.dvds = data
+    Amazon.getDvds movieTitle, (dvds) ->
+      $scope.dvds = dvds

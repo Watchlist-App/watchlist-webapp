@@ -5,6 +5,5 @@ angular.module('watchlistWebApp')
 
     movieTitle = $routeParams.movieTitle
 
-    Itunes.getOffers movieTitle, (data) ->
-      $scope.offers = data
-      console.log $scope.offers
+    Itunes.getOffers movieTitle, (offers) ->
+      $scope.offers = offers

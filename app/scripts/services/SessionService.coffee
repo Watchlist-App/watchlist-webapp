@@ -8,8 +8,6 @@ angular.module('watchlistWebApp')
       email: $cookies.email
       id: $cookies.id
 
-    console.log @authentificatedUser
-
     @logIn = (user) ->
       @authentificatedUser =
         name: user.name
@@ -24,6 +22,5 @@ angular.module('watchlistWebApp')
       delete $cookies.email
       delete $cookies.id
       @authentificatedUser = {}
-
 
     @

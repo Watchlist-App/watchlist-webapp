@@ -3,13 +3,13 @@
 angular.module('watchlistWebApp')
   .controller 'ProfileCtrl', ($scope, $routeParams, md5, Userservice, $location, Sessionservice) ->
 
-    $scope.userId = $routeParams.userId
-    $scope.user = Userservice.getUserWithId($routeParams.userId)
+    $scope.user = Userservice.get
+      id: $routeParams.userId
 
     $scope.deleteUser = ->
-      Userservice.deleteUser($scope.user.id)
+      Userservice.delete
+        id: $scope.user.id
       $location.path '/users'
 
     $scope.logIn = ->
       Sessionservice.logIn $scope.user
-      console.log Sessionservice.authentificatedUser

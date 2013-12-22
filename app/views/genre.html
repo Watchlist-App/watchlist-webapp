@@ -1,12 +1,10 @@
 
 <h1>{{genre}}</h1>
 <h3>movies</h3>
-<div class="row">
-  <div masonry="masonry">
-    <div ng-repeat="movie in movies" class="masonry-brick thumbnail"><a href="#/movie/{{movie.id}}"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}" alt="..."/></a>
-      <div class="caption">
-        <h5>{{movie.title}}</h5>
-      </div>
-    </div>
+<div masonry="masonry">
+  <div ng-repeat="movie in movies" class="masonry-brick"><a href="#/movie/{{movie.id}}"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}" alt="..."/></a>
+    <!-- .caption
+    <h5>{{movie.title}}</h5>
+    -->
   </div>
 </div>

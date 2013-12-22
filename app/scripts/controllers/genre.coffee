@@ -3,8 +3,8 @@
 angular.module('watchlistWebApp')
   .controller 'GenreCtrl', ($scope, $routeParams, Themoviedb, Sessionservice) ->
 
-    Themoviedb.getGenre $routeParams.genreId, (data) ->
-      $scope.genre = data.name
+    Themoviedb.getGenre $routeParams.genreId, (genre) ->
+      $scope.genre = genre.name
 
-    Themoviedb.getMoviesForGenre $routeParams.genreId, (data) ->
-      $scope.movies = data.results
+    Themoviedb.getMoviesForGenre $routeParams.genreId, (movies) ->
+      $scope.movies = movies.results
