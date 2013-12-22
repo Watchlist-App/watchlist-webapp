@@ -12,8 +12,10 @@ br
 br
 
 div(infinite-scroll="loadMore()", masonry="{ transitionDuration: '1s' }")
-  .masonry-brick(ng-repeat="movie in movies | filter : { title : search }")
+  .masonry-brick.effeckt-caption(ng-repeat="movie in movies | filter : { title : search }", data-effeckt-type="revolving-door-left")
     a(href="#/movie/{{movie.id}}")
       img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/{{imageSize}}/{{ movie.poster_path }}", alt="...")
-    // .caption
-      h5 {{movie.title}}
+      figcaption(style="background: grey;")
+        .effeckt-figcaption-wrap
+          h5 {{movie.title}}
+          p {{movie.release_date}}

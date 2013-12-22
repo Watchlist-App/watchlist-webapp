@@ -3,6 +3,11 @@
 <label for="search" class="control-label">search</label>
 <input id="search" type="text" ng-model="search" class="form-control"/><br/>
 <div masonry="masonry">
-  <div ng-repeat="user in users | filter : search" class="masonry-brick"><a href="#profile/{{user.id}}"><img ng-src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=150&amp;d=mm" height="150" width="150"/>
-      <h5>{{user.name}}</h5></a></div>
+  <div ng-repeat="user in users | filter : search" data-effeckt-type="revolving-door-left" class="masonry-brick effeckt-caption"><a href="#profile/{{user.id}}"><img ng-src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=150&amp;d=mm" height="150" width="150"/>
+      <figcaption style="background: grey;">
+        <div class="effeckt-figcaption-wrap">
+          <h5>{{user.name}}</h5>
+          <p>{{user.email}}</p>
+        </div>
+      </figcaption></a></div>
 </div>

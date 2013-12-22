@@ -5,7 +5,10 @@ input#search.form-control(type="text", ng-model="search")
 br
 
 div(masonry)
-  .masonry-brick(ng-repeat="user in users | filter : search")
+  .masonry-brick.effeckt-caption(ng-repeat="user in users | filter : search", data-effeckt-type="revolving-door-left")
     a(href="#profile/{{user.id}}")
       img(ng-src="http://www.gravatar.com/avatar/{{user.email | gravatar}}?s=150&d=mm", height="150", width="150")
-      h5 {{user.name}}
+      figcaption(style="background: grey;")
+        .effeckt-figcaption-wrap
+          h5 {{user.name}}
+          p {{user.email}}
