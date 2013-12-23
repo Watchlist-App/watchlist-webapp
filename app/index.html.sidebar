@@ -1,0 +1,303 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/design.css">
+        <link rel="stylesheet" href="styles/effeckt.css">
+        <link rel="stylesheet" href="styles/sidebarTransitions.css">
+        <!-- endbuild -->
+</head>
+  <body ng-app="watchlistWebApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+
+  <div id="st-container" class="st-container" ng-class="{ 'st-menu-open': sidebar, 'st-effect-14': sidebar}" ng-controller="SidebarCtrl">
+
+    <nav class="st-menu st-effect-1" id="menu-1">
+        <h2 class="icon icon-lab">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+      
+      <nav class="st-menu st-effect-2" id="menu-2">
+        <h2 class="icon icon-stack">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+
+      <nav class="st-menu st-effect-4" id="menu-4">
+        <h2 class="icon icon-lab">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+
+      <nav class="st-menu st-effect-5" id="menu-5">
+        <h2 class="icon icon-stack">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+      
+      <nav class="st-menu st-effect-9" id="menu-9">
+        <h2 class="icon icon-lab">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+      
+      <nav class="st-menu st-effect-10" id="menu-10">
+        <h2 class="icon icon-stack">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+      
+      <nav class="st-menu st-effect-11" id="menu-11">
+        <h2 class="icon icon-lab">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+
+      <nav class="st-menu st-effect-12" id="menu-12">
+        <h2 class="icon icon-stack">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+
+      <nav class="st-menu st-effect-13" id="menu-13">
+        <h2 class="icon icon-stack">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+
+      <!-- content push wrapper -->
+      <div class="st-pusher">
+        <!--  
+          example menus 
+          these menus will be under the push wrapper
+        -->
+        <nav class="st-menu st-effect-3" id="menu-3">
+          <h2 class="icon icon-lab">Sidebar</h2>
+          <ul>
+            <li><a class="icon icon-data" href="#">Data Management</a></li>
+            <li><a class="icon icon-location" href="#">Location</a></li>
+            <li><a class="icon icon-study" href="#">Study</a></li>
+            <li><a class="icon icon-photo" href="#">Collections</a></li>
+            <li><a class="icon icon-wallet" href="#">Credits</a></li>
+          </ul>
+        </nav>
+
+        <nav class="st-menu st-effect-6" id="menu-6">
+          <h2 class="icon icon-stack">Sidebar</h2>
+          <ul>
+            <li><a class="icon icon-data" href="#">Data Management</a></li>
+            <li><a class="icon icon-location" href="#">Location</a></li>
+            <li><a class="icon icon-study" href="#">Study</a></li>
+            <li><a class="icon icon-photo" href="#">Collections</a></li>
+            <li><a class="icon icon-wallet" href="#">Credits</a></li>
+          </ul>
+        </nav>
+
+        <nav class="st-menu st-effect-7" id="menu-7">
+          <h2 class="icon icon-lab">Sidebar</h2>
+          <ul>
+            <li><a class="icon icon-data" href="#">Data Management</a></li>
+            <li><a class="icon icon-location" href="#">Location</a></li>
+            <li><a class="icon icon-study" href="#">Study</a></li>
+            <li><a class="icon icon-photo" href="#">Collections</a></li>
+            <li><a class="icon icon-wallet" href="#">Credits</a></li>
+          </ul>
+        </nav>
+
+        <nav class="st-menu st-effect-8" id="menu-8">
+          <h2 class="icon icon-stack">Sidebar</h2>
+          <ul>
+            <li><a class="icon icon-data" href="#">Data Management</a></li>
+            <li><a class="icon icon-location" href="#">Location</a></li>
+            <li><a class="icon icon-study" href="#">Study</a></li>
+            <li><a class="icon icon-photo" href="#">Collections</a></li>
+            <li><a class="icon icon-wallet" href="#">Credits</a></li>
+          </ul>
+        </nav>
+
+        <nav class="st-menu st-effect-14" id="menu-14">
+          <h2 class="icon icon-stack">Sidebar</h2>
+          <ul>
+            <li><a class="icon icon-data" href="#">Data Management</a></li>
+            <li><a class="icon icon-location" href="#">Location</a></li>
+            <li><a class="icon icon-study" href="#">Study</a></li>
+            <li><a class="icon icon-photo" href="#">Collections</a></li>
+            <li><a class="icon icon-wallet" href="#">Credits</a></li>
+          </ul>
+        </nav>
+
+
+
+
+  <div class="st-content"><!-- this is the wrapper for the content -->
+    <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+
+    <!-- header -->
+    <div class="header">
+      <ul class="nav nav-pills pull-right" ng-controller="HeaderController">
+        <li><button data-effect="st-effect-1" ng-click="sidebarToggle()">Slide in on top</button></li>
+        <li ng-class="{ active: isActive('/')}"><a ng-href="#">Home</a></li>
+        <li ng-class="{ active: isActive('/users')}"><a ng-href="#/users">Users</a></li>
+        <li ng-class="{ active: isActive('/movies')}"><a ng-href="#/movies">Movies</a></li>
+        <li ng-class="{ active: isActive('/search')}"><a ng-href="#/search">Search</a></li>
+        <li ng-class="{ hidden: !session.authentificatedUser.email}">
+        <a ng-href="#/profile/{{session.authentificatedUser.id}}">
+            <img ng-src="http://www.gravatar.com/avatar/{{session.authentificatedUser.email | gravatar}}?s=40&d=mm" height="40" width="40" />
+            {{session.authentificatedUser.name}}
+          </a>
+        </li>
+        <li ng-class="{ hidden: session.authentificatedUser.email }"><a ng-href="#/login">Log in</a></li>
+        <li ng-class="{ hidden: !session.authentificatedUser.email }"><a ng-href="#/" ng-click="logOut()">Log out</a></li>
+      </ul>
+      <h3 class="text-muted">Watchlist web</h3>
+    </div>
+
+    <!-- Add your site or application content here -->
+    <div class="container app-view" ng-view=""></div>
+
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-46135308-1', 'watchlist-webapp.herokuapp.com');
+       ga('send', 'pageview');
+    </script>
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
+    <!-- <script src="bower_components/masonry/masonry.js"></script> -->
+    <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/sass-bootstrap/js/affix.js"></script>
+        <script src="bower_components/sass-bootstrap/js/alert.js"></script>
+        <script src="bower_components/sass-bootstrap/js/button.js"></script>
+        <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
+        <script src="bower_components/sass-bootstrap/js/transition.js"></script>
+        <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
+        <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/sass-bootstrap/js/modal.js"></script>
+        <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+        <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/sass-bootstrap/js/popover.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/modules.js -->
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-md5/angular-md5.js"></script>
+        <script src="bower_components/angular-masonry/angular-masonry.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/ngInfiniteScroll/ng-infinite-scroll.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/signup.js"></script>
+        <script src="scripts/controllers/users.js"></script>
+        <script src="scripts/controllers/profile.js"></script>
+        <script src="scripts/services/userService.js"></script>
+        <script src="scripts/controllers/movies.js"></script>
+        <script src="scripts/services/themoviedb.js"></script>
+        <script src="scripts/controllers/movie.js"></script>
+        <script src="scripts/controllers/search.js"></script>
+        <!-- <script src="scripts/directives/movieMiniPreview.js"></script> -->
+        <script src="scripts/services/fandango.js"></script>
+        <script src="scripts/controllers/cinemas.js"></script>
+        <script src="scripts/services/FeedLoader.js"></script>
+        <script src="scripts/services/Amazon.js"></script>
+        <script src="scripts/controllers/dvds.js"></script>
+        <script src="scripts/services/Itunes.js"></script>
+        <script src="scripts/controllers/itunes.js"></script>
+        <script src="scripts/services/Geolocation.js"></script>
+        <script src="scripts/services/SessionService.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/HeaderController.js"></script>
+        <script src="scripts/services/Listservice.js"></script>
+        <script src="scripts/controllers/company.js"></script>
+        <script src="scripts/controllers/genre.js"></script>
+        <script src="scripts/controllers/actor.js"></script>
+        <script src="scripts/controllers/sidebar.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
