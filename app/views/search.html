@@ -2,9 +2,7 @@
 <h1>Search</h1>
 <input type="text" ng-model="searchPhrase" ng-change="search()" class="form-control"/>
 <div masonry="masonry">
-  <div ng-repeat="movie in results" class="masonry-brick"><a href="#movie/{{movie.id}}"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w185/{{ movie.poster_path }}"/></a>
-    <div class="caption">
-      <h5>{{movie.title}}</h5>
-    </div>
+  <div ng-repeat="movie in results" class="masonry-brick">
+    <movie></movie>
   </div>
 </div>

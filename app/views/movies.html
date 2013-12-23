@@ -1,18 +1,7 @@
 
-<input type="text" ng-model="search" class="form-control"/><br/>
-<div class="btn-group btn-group-lg">
-  <button type="button" ng-click="setSize(1)" ng-class="{active: isActive(1)}" class="btn btn-default">tiny</button>
-  <button type="button" ng-click="setSize(2)" ng-class="{active: isActive(2)}" class="btn btn-default">small</button>
-  <button type="button" ng-click="setSize(3)" ng-class="{active: isActive(3)}" class="btn btn-default">medium</button>
-  <button type="button" ng-click="setSize(4)" ng-class="{active: isActive(4)}" class="btn btn-default">large</button>
-  <button type="button" ng-click="setSize(5)" ng-class="{active: isActive(5)}" class="btn btn-default">very large</button>
-</div><br/><br/>
+<h1>Popular Movies</h1>
 <div infinite-scroll="loadMore()" masonry="{ transitionDuration: '1s' }">
-  <div ng-repeat="movie in movies | filter : { title : search }" data-effeckt-type="revolving-door-left" class="masonry-brick effeckt-caption"><a href="#/movie/{{movie.id}}"><img ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/{{imageSize}}/{{ movie.poster_path }}" alt="..."/>
-      <figcaption style="background: grey;">
-        <div class="effeckt-figcaption-wrap">
-          <h5>{{movie.title}}</h5>
-          <p>{{movie.release_date}}</p>
-        </div>
-      </figcaption></a></div>
+  <div ng-repeat="movie in movies | filter : { title : search }" class="masonry-brick">
+    <movie></movie>
+  </div>
 </div>

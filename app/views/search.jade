@@ -4,7 +4,4 @@ input.form-control(type="text", ng-model="searchPhrase", ng-change="search()")
 
 div(masonry)
   .masonry-brick(ng-repeat="movie in results")
-    a(href="#movie/{{movie.id}}")
-      img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w185/{{ movie.poster_path }}")
-    .caption
-      h5 {{movie.title}}
+    movie

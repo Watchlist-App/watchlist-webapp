@@ -1,0 +1,8 @@
+div(masonry)
+  .masonry-brick.effeckt-caption(ng-repeat="movie in movies", data-effeckt-type="revolving-door-left")
+    a(href="#/movie/{{movie.id}}")
+      img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/{{imageSize}}/{{ movie.poster_path }}", alt="...")
+      figcaption(style="background: grey;")
+        .effeckt-figcaption-wrap
+          h5 {{movie.title}}
+          p {{movie.release_date}}

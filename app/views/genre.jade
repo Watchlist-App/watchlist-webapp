@@ -1,9 +1,3 @@
 h1 {{genre}}
 h3 movies
-
-div(masonry)
-  .masonry-brick(ng-repeat="movie in movies")
-    a(href="#/movie/{{movie.id}}")
-      img(ng-src="http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342/{{ movie.poster_path }}", alt="...")
-    // .caption
-      h5 {{movie.title}}
+movie-grid
