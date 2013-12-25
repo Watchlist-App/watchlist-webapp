@@ -25,6 +25,36 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
 
+    jade: {
+      dist: {
+        options: {
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>',
+            dest: '.tmp',
+            src: '{,*/}*.jade',
+            ext: '.html'
+          }
+        ]
+      },
+      server: {
+        options: {
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>',
+            dest: '.tmp',
+            src: '{,*/}*.jade',
+            ext: '.html'
+          }
+        ]
+      }
+    },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       coffee: {
@@ -39,6 +69,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
+      jade: {
+        files: ['<%= yeoman.app %>/{,*/}*.jade', '<%= yeoman.app %>/views/{,*/}*.jade'],
+        tasks: ['jade:server']
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -48,6 +82,7 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
+          '<%= yeoman.app %>/{,*/}*.jade',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -288,6 +323,7 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
+        'jade:server',
         'coffee:dist',
         'copy:styles'
       ],
@@ -369,6 +405,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'jade:dist',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',

@@ -2,6 +2,6 @@
 
 angular.module('watchlistWebApp')
   .directive 'movie', () ->
-    templateUrl: 'views/directivesTemplates/movie.html'
+    templateUrl: 'views/movie-directive.html'
     restrict: 'E'
     controller: ($scope) ->
