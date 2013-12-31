@@ -1,5 +1,5 @@
-Watchlist web app
-================
+#Watchlist web app 
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ##Technology stack:
 ###Front-end
