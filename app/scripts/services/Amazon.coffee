@@ -3,7 +3,7 @@
 angular.module('watchlistWebApp')
   .service 'Amazon', ($http) ->
 
-    baseURL = 'http://watchlist-app-server.herokuapp.com/amazon/dvds'
+    baseURL = 'http://watchlist-koa.herokuapp.com/amazon/DVD'
 
     @getDvds = (title, callback) ->
 
