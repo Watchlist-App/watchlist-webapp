@@ -3,8 +3,7 @@
 angular.module('watchlistWebApp')
   .service 'Themoviedb', ($resource, $http) ->
 
-    apiKey = "86afaae5fbe574d49418485ca1e58803"
-    baseURL = 'http://api.themoviedb.org/3/'
+    baseURL = 'http://watchlist-koa.herokuapp.com/tmdb/3/'
     @imageURL = "http://d3gtl9l2a4fn1j.cloudfront.net/t/p/"
     @imageOriginal = "original"
     @imageLarge = "w500"
@@ -18,7 +17,6 @@ angular.module('watchlistWebApp')
         method: 'GET'
         url: baseURL + 'movie/popular'
         params:
-          api_key: apiKey
           page: page
       .
         success (data, status, headers, config) ->
@@ -31,7 +29,6 @@ angular.module('watchlistWebApp')
         method: 'GET'
         url: baseURL + 'movie/' + id
         params:
-          api_key: apiKey
           append_to_response: 'trailers,credits'
       .
         success (data, status, headers, config) ->
@@ -43,7 +40,6 @@ angular.module('watchlistWebApp')
         method: 'GET'
         url: baseURL + 'search/movie'
         params:
-          api_key: apiKey
           query: phrase
       .
         success (data, status, headers, config) ->
@@ -54,8 +50,6 @@ angular.module('watchlistWebApp')
       $http
         method: 'GET'
         url: baseURL + 'company/' + id
-        params:
-          api_key: apiKey
       .
         success (data, status, headers, config) ->
           callback data
@@ -65,8 +59,6 @@ angular.module('watchlistWebApp')
       $http
         method: 'GET'
         url: baseURL + 'company/' + id + '/movies'
-        params:
-          api_key: apiKey
       .
         success (data, status, headers, config) ->
           callback data
@@ -76,8 +68,6 @@ angular.module('watchlistWebApp')
       $http
         method: 'GET'
         url: baseURL + 'genre/' + id
-        params:
-          api_key: apiKey
       .
         success (data, status, headers, config) ->
           callback data
@@ -87,8 +77,6 @@ angular.module('watchlistWebApp')
       $http
         method: 'GET'
         url: baseURL + 'genre/' + id + '/movies'
-        params:
-          api_key: apiKey
       .
         success (data, status, headers, config) ->
           callback data
@@ -98,12 +86,7 @@ angular.module('watchlistWebApp')
       $http
         method: 'GET'
         url: baseURL + 'person/' + id
-        params:
-          api_key: apiKey
       .
         success (data, status, headers, config) ->
           callback data
     @
-
-
-
