@@ -54,7 +54,7 @@ angular.module('watchlistWebApp', [
       .when '/actor/:actorId',
         templateUrl: 'views/actor.html'
         controller: 'ActorCtrl'
-      .when '/ebay',
+      .when '/ebay/:movieTitle',
         templateUrl: 'views/ebay.html'
         controller: 'EbayCtrl'
       .otherwise
