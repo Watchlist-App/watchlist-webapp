@@ -1,0 +1,8 @@
+h2 Offers on ebay
+div(masonry)
+  .masonry-brick(ng-repeat="offer in offers")
+    a(href="{{offer.viewItemURL[0]}}")
+      img(src="{{offer.galleryURL[0]}}")
+    .caption
+      h4 {{offer.title[0]}}
+      h5 price - {{offer.sellingStatus[0].currentPrice[0].__value__}}
